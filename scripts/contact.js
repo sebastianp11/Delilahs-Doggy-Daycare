@@ -2,24 +2,24 @@
 
 // hint: you can change the style of an element by modifying the value of that element's .style.fontSize, or by updating its .classList.
 
-document.addEventListener('DOMContentLoaded', () => {
-	const submitBtn = document.getElementById('submit-button');
-	const contactPage = document.getElementById('contact-page');
+document.addEventListener('DOMContentLoaded', function() {
+	var submit_btn = document.getElementById('submit-button');
+	var contact_page = document.getElementById('contact-page');
 
-	if (!submitBtn) return;
-	if (!contactPage) return;
+	if (!submit_btn) return;
+	if (!contact_page) return;
 
-	submitBtn.addEventListener('click', (event) => {
+	submit_btn.addEventListener('click', function(event) {
 		if (event && typeof event.preventDefault === 'function') {
 			event.preventDefault();
 		}
 
 		// Clear existing content and show the thank-you message
-		contactPage.innerHTML = '';
-		const msg = document.createElement('p');
-		msg.textContent = 'Thank you for your message';
-		msg.style.fontSize = '24px';
-		contactPage.appendChild(msg);
+		contact_page.innerHTML = '';
+		var thank_you_msg = document.createElement('p');
+		thank_you_msg.textContent = 'Thank you for your message';
+		thank_you_msg.style.fontSize = '24px';
+		contact_page.appendChild(thank_you_msg);
 	});
 });
 
